@@ -1,0 +1,9 @@
+<h1> Event info </h1>
+<h2><%= @event.name %></h2>
+<h2> Location: <%= @event.location %></h2>
+<p> Date and Time: <%= @event.datetime %></p>
+<p> Price Adult: <%= @event.price_adult %></p>
+<p> Price Child: <%= @event.price_child %></p>
+<div>
+ <% link_to "Destroy this event", "/events/#{@event.id}", method: :delete %>
+ </div>

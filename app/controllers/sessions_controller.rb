@@ -6,12 +6,12 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
-      session[:user_id] = user.user_id
+      session[:user_id] = user.id
       flash[:success] = "Sucessfully logged in!"
       redirect_to "/"
     else
       flash[:warning] = "Invalid email or password"
-      redirect_to '/'
+      redirect_to '/login'
     end
   end
 
@@ -21,3 +21,4 @@ class SessionsController < ApplicationController
     flash[:success] = "Successfully logged out!"
     redirect_to "/login"
   end
+end

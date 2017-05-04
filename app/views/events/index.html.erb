@@ -1,4 +1,37 @@
-<h1> All Events </h1>
+<!-- WRAPPER -->
+    <div id="wrapper">
+
+      <!-- PAGE TITLE -->
+      <header id="page-title"> <!-- style="background-image:url('assets/images/demo/parallax_bg.jpg')" -->
+        <!--
+          Enable only if bright background image used
+          <span class="overlay"></span>
+        -->
+
+        <div class="container">
+          <h1>Events</h1>
+
+          <ul class="breadcrumb">
+            <li><a href="/events">Events</a></li>
+            <li><a href="/events">All</a></li>
+            <li class="active">Full Detail</li>
+          </ul>
+        </div>
+      </header>
+
+      <section class="container">
+        <h2><strong>Upcoming Events</strong> </h2>
+
+        <p class="lead">You can find out about all our upcoming events right here! The only place you'll need to go to get information, volunteer, or buy tickets or make donations. </p>
+
+           
+
+        <div class="divider"><!-- divider -->
+          <i class="fa fa-star"></i>
+        </div>
+
+         
+
 <% @events.each do |event| %>
   <h2><a href="/events/<%= event.id %>"><%= event.name %></a></h2>
   <h3> Location: <%= event.location %></h3>
@@ -6,3 +39,4 @@
   <p> Adult Price: <%= event.price_adult %></p>
   <p> Child Price: <%= event.price_child %></p>
   <% end %>
+

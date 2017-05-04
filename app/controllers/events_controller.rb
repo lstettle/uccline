@@ -17,7 +17,8 @@ class EventsController < ApplicationController
       price_child: params["price_child"]
       )
     event.save
-    render "create.html.erb"
+    # render "create.html.erb"
+    redirect_to "/events/#{event.id}"
   end
 
   def show
@@ -41,7 +42,8 @@ class EventsController < ApplicationController
     event.price_adult = params[:price_adult]
     event.price_child = params[:price_child]
     event.save
-    render "update.html.erb"
+    # render "update.html.erb"
+    redirect_to "/events/#{event.id}"
   end
 
   def destroy

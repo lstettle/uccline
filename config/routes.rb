@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   
   get "/" => "pages#home"
   get "/about" => "pages#about"
+  get "/contact" => "pages#contact"
+  get "/staff" => "pages#staff"
 
   get "/events" => "events#index"
   get "/events/new" => "events#new"
@@ -15,7 +17,7 @@ Rails.application.routes.draw do
   get "/categories" => "categories#index"
   get "/categories/new" => "categories#new"
   post "/categories" => "categories#create"
-  get "/categories/:id" => "categores#show"
+  get "/categories/:id" => "categories#show"
 
   get "/tasks" => "tasks#index"
   get "/tasks/new" => "tasks#new"

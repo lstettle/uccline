@@ -4,6 +4,10 @@ class EventsController < ApplicationController
     render "index.html.erb"
   end
 
+  def calendar
+    @events = Event.all
+  end
+
   def new
     render "new.html.erb"
   end
@@ -24,6 +28,10 @@ class EventsController < ApplicationController
   def show
     event_id = params[:id]
     @event = Event.find_by(id: event_id)
+    if params[:category]
+      category = Category.find_by(name: params[:category])
+      @events = category.events
+    end
     render "show.html.erb"
   end
 

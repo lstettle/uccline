@@ -30,7 +30,7 @@
           <i class="fa fa-star"></i>
         </div>
 
-         
+
 
 <% @events.each do |event| %>
   <h2><a href="/events/<%= event.id %>"><%= event.name %></a></h2>
@@ -39,4 +39,6 @@
   <p> Adult Price: <%= event.price_adult %></p>
   <p> Child Price: <%= event.price_child %></p>
   <% end %>
+
+ 
 

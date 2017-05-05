@@ -10,5 +10,10 @@ class PagesController < ApplicationController
   def contact
     "render contact.html.erb"
   end
+  
+  def staff
+    "render staff.html.erb"
+  end
+    
 end
 

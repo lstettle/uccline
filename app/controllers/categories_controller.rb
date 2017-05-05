@@ -14,7 +14,6 @@ class CategoriesController < ApplicationController
       name: params["name"],
       )
     category.save
-    # render "create.html.erb"
     redirect_to "/categories/#{category.id}"
   end
 

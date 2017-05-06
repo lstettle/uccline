@@ -1,11 +1,15 @@
 class EventsController < ApplicationController
+  
   def index
-    @events = Event.all
-    render "index.html.erb"
+    @events = Event.all 
+    if params[:category]
+      category = Category.find_by(name: params[:category])
+      @events = category.events
+    end
   end
-
   def calendar
     @events = Event.all
+    render "index.html.erb"
   end
 
   def new
@@ -18,20 +22,17 @@ class EventsController < ApplicationController
       datetime: params["datetime"],
       name: params["name"],
       price_adult: params["price_adult"],
-      price_child: params["price_child"]
+      price_child: params["price_child"],
+      status: params["status"],
+      description: params["description"]
       )
     event.save
-    # render "create.html.erb"
     redirect_to "/events/#{event.id}"
   end
 
   def show
     event_id = params[:id]
     @event = Event.find_by(id: event_id)
-    if params[:category]
-      category = Category.find_by(name: params[:category])
-      @events = category.events
-    end
     render "show.html.erb"
   end
 
@@ -50,7 +51,6 @@ class EventsController < ApplicationController
     event.price_adult = params[:price_adult]
     event.price_child = params[:price_child]
     event.save
-    # render "update.html.erb"
     redirect_to "/events/#{event.id}"
   end
 
@@ -60,4 +60,5 @@ class EventsController < ApplicationController
     event.destroy
     render "destroy.html.erb"
   end
+ 
 end

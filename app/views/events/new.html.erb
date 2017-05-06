@@ -32,11 +32,17 @@
           <i class="fa fa-star"></i>
         </div>
 
+<section class="container">
 
+        <div class="row">
+ 
+
+          <div class="col-md-9">
 
 
 
 <h1> New Event </h1>
+<form action="/events" method="post">
 <%= form_tag '/events', method: :post do %>
   <div class="form-group">
   <%= label_tag :name %>
@@ -59,4 +65,107 @@
     <%= text_field_tag :price_child, "", class: "form=control" %>
   </div>
   <%= submit_tag "Add event", class: "btn btn-primary" %>
+
   <% end %>
+
+
+
+            <h2><strong>New Event</strong> <small class="font300"></small></h2>
+
+            
+              <div class="row">
+
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input type="text" value="" class="form-control" placeholder="Event Name">
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Category</label> 
+                    <select class="form-control pointer">
+                      <option value="" </option>
+                      <option value=""</option>
+                      <option value="">Option #2</option>
+
+                      <optgroup label="Optgroup">
+                        <option value="">Option #1</option>
+                        <option value="">Option #2</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-md-6">
+                    <label>Location</label>
+                    <input type="text" value="location" class="form-control" />
+                  </div>
+                  <div class="col-md-6">
+                    <label>Date and Time</label>
+                    <input type="datetime" value="" class="form-control" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-4">
+                    <label>Input</label>
+                    <input type="text" value="" class="form-control" />
+                  </div>
+                  <div class="col-md-4">
+                    <label>Input</label>
+                    <input type="email" value="" class="form-control" />
+                  </div>
+                  <div class="col-md-4">
+                    <label>Input</label>
+                    <input type="email" value="" class="form-control" />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group">
+                  <div class="col-md-6">
+                    <label class="block">Checkbox</label>
+                    <input type="checkbox" value="" class="form-control" checked="checked" />
+                    <input type="checkbox" value="" class="form-control" />
+                    <input type="checkbox" value="" class="form-control" />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="block">Radio</label>
+                    <input type="radio" name="radio_name" value="1" class="form-control" checked="checked" />
+                    <input type="radio" name="radio_name" value="2" class="form-control" />
+                    <input type="radio" name="radio_name" value="2" class="form-control" />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <label>Textarea</label>
+                    <textarea rows="10" class="form-control"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <button class="btn btn-primary"><i class="fa fa-check"></i> FORM SUBMIT</button> 
+                  <button class="btn btn-primary disabled">FORM SUBMIT DISABLED</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+
+
+      </section>
+
+
+    </div>
+    <!-- /WRAPPER -->
+
+
+
+     

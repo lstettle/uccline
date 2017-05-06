@@ -164,7 +164,7 @@
                       <li><a href="/about">About Us</a></li>
                       <li><a href="/contact">Contact Us</a></li>
                       <li><a href="#">Join Us for Worship?</a></li>
-                      <li><a href="Staff">Staff</a></li>
+                      <li><a href="/staff">Staff</a></li>
                       <li><a href="revolution-official-1.html">Visitation/Prayer Requests</a></li>
                     </ul>
                   </li>
@@ -400,7 +400,15 @@
     <span id="header_shadow"></span>
     <!-- /TOP NAV -->
 
-    
+
+    <% flash.each do |name, message| %>
+    <div class="alert alert-<%= name %> alert-dismissible fade in" role="alert">
+    <i class="fa fa-frown-o"></i>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">&times;</span><span class="sr-only">Close</span></button>
+    <%= message.html_safe %>  
+    </div>
+    <% end %>
+
     <%= yield %>
 
 

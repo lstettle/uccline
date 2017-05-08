@@ -27,7 +27,8 @@ Rails.application.routes.draw do
   patch "/tasks/:id" => "tasks#update"
   delete "/tasks/:id" => "tasks#destroy"
 
-
+  get "/users" => "users#index"
+  get "users/:id" => "users#show"
 
 
   get "/signup" => "users#new"

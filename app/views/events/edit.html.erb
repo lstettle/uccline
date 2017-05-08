@@ -40,11 +40,23 @@
   <div class="form-group">
     <%= label_tag :location %>
     <%= text_field_tag :location, @event.location, class: 'form-control' %>
-  </div><div class="form-group">
-    <%= label_tag :datetime %>
-    <%= text_field_tag :datetime, @event.datetime, class: 'form-control' %>
   </div>
-
+  <div class="form-group">
+    <%= label_tag :start_date %>
+    <%= text_field_tag :start_date, @event.start_date, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :end_date %>
+    <%= text_field_tag :end_date, @event.end_date, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :start_time %>
+    <%= text_field_tag :start_time, @event.start_time, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :end_time %>
+    <%= text_field_tag :end_time, @event.end_time, class: 'form-control' %>
+  </div>
   <div class="form-group">
     <%= label_tag :price_adult %>
     <%= text_field_tag :price_adult, @event.price_adult, class: 'form-control' %>

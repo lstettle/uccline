@@ -1,0 +1,45 @@
+<!-- WRAPPER -->
+    <div id="wrapper">
+
+      <!-- PAGE TITLE -->
+      <header id="page-title"> <!-- style="background-image:url('assets/images/demo/parallax_bg.jpg')" -->
+        <!--
+          Enable only if bright background image used
+          <span class="overlay"></span>
+        -->
+
+        <div class="container">
+          <h1>Events</h1>
+
+          <ul class="breadcrumb">
+            <li><a href="/tasks">Tasks</a></li>
+            <li><a href="/tasks">All</a></li>
+            <li class="active">Full Detail</li>
+          </ul>
+        </div>
+      </header>
+
+      <section class="container">
+        <h2><strong>How you can volunteer</strong> </h2>
+
+        <p class="lead">You can easily find out what needs doing and volunteer right here. </p>
+          
+
+        <a href="/tasks/new" button type="button" class="btn btn-primary">Add Task</button> </a>
+      
+
+           
+
+        <div class="divider"><!-- divider -->
+          <i class="fa fa-star"></i>
+        </div>
+
+
+
+<% @tasks.each do |task| %>
+  <h2><a href="/tasks/<%= task.id %>"><%= task.description %></a></h2>
+  <h3> Event: <%=  %></h3>
+  <p>  </p>
+  <p>  Status: <%= task.status %></p>
+  <p>  Created by: <%= task.user_id %></p>
+  <% end %>

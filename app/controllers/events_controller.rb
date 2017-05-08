@@ -19,7 +19,10 @@ class EventsController < ApplicationController
   def create
     event = Event.new(
       location: params["location"],
-      datetime: params["datetime"],
+      start_date: params["start_date"],
+      end_date: params["end_date"],
+      start_time: params["start_time"],
+      end_time: params["end_time"],
       name: params["name"],
       price_adult: params["price_adult"],
       price_child: params["price_child"],
@@ -46,7 +49,10 @@ class EventsController < ApplicationController
     event_id = params[:id]
     event = Event.find_by(id: event_id)
     event.location = params[:location]
-    event.datetime = params[:datetime]
+    event.start_date = params[:start_date]
+    event.end_date = params[:end_date]
+    event.start_time = params[:start_time]
+    event.end_time = params[:end_time]
     event.name = params[:name]
     event.price_adult = params[:price_adult]
     event.price_child = params[:price_child]

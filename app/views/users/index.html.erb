@@ -1,0 +1,45 @@
+ <!--WRAPPER -->
+    <div id="wrapper">
+
+      <!-- PAGE TITLE -->
+      <header id="page-title"> <!-- style="background-image:url('assets/images/demo/parallax_bg.jpg')" -->
+        <!--
+          Enable only if bright background image used
+          <span class="overlay"></span>
+        -->
+
+        <div class="container">
+          <h1>Church Directory</h1>
+
+          <ul class="breadcrumb">
+            <li><a href="/users">Users</a></li>
+            <li><a href="/users">Church Directory</a></li>
+            <li class="active">Full Detail</li>
+          </ul>
+        </div>
+      </header>
+
+      <section class="container">
+        <h2><strong>Church Directory</strong> </h2>
+
+        <p class="lead">Contact Information at your fingertips. </p>
+          
+      
+
+           
+
+        <div class="divider"><!-- divider -->
+          <i class="fa fa-star"></i>
+        </div>
+
+
+
+<% @users.each do |user| %>
+  <h3><a href="/tasks/<%= user.id %>"><%= user.id %></a></h3>
+  <h2> <strong>First Name: <%= user.first_name %></strong></h2>
+  <h2> <strong>Last Name: <%= user.last_name %></strong></h2>
+  <p> Address: <%= user.address %></p>
+  <p> Phone: <%= user.phone %></p>
+  <p> Email: <%= user.email %></p>
+  <p> Type: <%= user.role %></p>
+  <% end %>

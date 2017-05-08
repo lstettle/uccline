@@ -22,9 +22,9 @@
 
       <section class="container">
         <h2><strong>Event Details</strong> </h2>
-        <button type="button" class="btn btn-primary">Update Event</button>
-        <a href="/events/:id" button type="button" class="btn btn-primary">Delete Event</button>
-         <a href="/events/:id/" button type="button" class="btn btn-primary">Update Event</button> </a>
+    
+        <a href="/events/:id">Delete Event</a>
+         <a href="/events/:id/">Update Event</button> </a>
 
 
         <div class="divider"><!-- divider -->
@@ -43,7 +43,10 @@
 </ul>
 </div>
 <h2> Location: <%= @event.location %></h2>
-<p> Date and Time: <%= @event.datetime %></p>
+<p> Start Date: <%= @event.start_date %></p>
+<p> End Date: <%= @event.end_date %></p>
+<p> Start Time: <%= @event.start_time %></p>
+<p> End Time: <%= @event.end_time %></p>
 <p> Price Adult: <%= @event.price_adult %></p>
 <p> Price Child: <%= @event.price_child %></p>
 

@@ -13,8 +13,8 @@
 
           <ul class="breadcrumb">
             <li><a href="/tasks">Tasks</a></li>
-            <li><a href="/tasks">All</a></li>
-            <li class="active">Full Detail</li>
+            <li><a href="/tasks/:id">Task Details</a></li>
+            <li class="active">Task Details</li>
           </ul>
         </div>
       </header>
@@ -33,16 +33,13 @@
         <div class="divider"><!-- divider -->
           <i class="fa fa-star"></i>
         </div>
+         
 
-
-
-<% @tasks.each do |task| %>
-  <h2><a href="/tasks/<%= task.id %>"><%= task.description %></a></h2>
-  <h3> Event: <%= task.event.name %></h3>
-  <h3> Event Date: <%= task.event.start_date %></h3>
-  <p>  </p>
-  <p>  Status: <%= task.status %></p>
-  <p>  Created by: <%= task.created_by%></p>
-  <p>  Event Owner: <%= task.event_owner %></p>
-  <% end %>
-  <a href="/tasks/:id/edit"><Volunteer here></a>
+<h2> Location: <%= @task.event.location %></h2>
+<p> Start Date: <%= @task.event.start_date %></p>
+<p> End Date: <%= @task.event.end_date %></p>
+<p> Start Time: <%= @task.start_time %></p>
+<p> End Time: <%= @task.end_time %></p>
+<p> Created By: <%= @task.created_by %></p>
+<p> Direct Questions to: <%= @task.event_owner %></p>
+<p> Task Status: <%= @task.status %></p>

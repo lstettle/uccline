@@ -15,17 +15,20 @@ class TasksController < ApplicationController
   def create
     task = Task.new(
       description: params["description"],
-      user_id: params["user_id"],
+      created_by: params["user_id"],
       event_id: params["event_id"],
       status: params["status"],
       )
     task.save
-    redirect_to "/tasks/#{task.id}"
+    
   end
 
   def show
     task_id = params[:id]
     @task = Task.find_by(id: task_id)
+    volunteer = Volunteer.new(task_id: task.id, user_id: params["volunteer"])
+    volunteer.save
+    redirect_to "/tasks/#{task.id}"
     render "show.html.erb"
   end
 

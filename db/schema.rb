@@ -10,13 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170508181624) do
+ActiveRecord::Schema.define(version: 20170514151224) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "committees", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "member"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -30,7 +37,7 @@ ActiveRecord::Schema.define(version: 20170508181624) do
 
   create_table "events", force: :cascade do |t|
     t.string   "location"
-    t.date     "start_date"
+    t.datetime "start_date"
     t.integer  "created_by"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -44,13 +51,30 @@ ActiveRecord::Schema.define(version: 20170508181624) do
     t.time     "end_time"
   end
 
+  create_table "locations", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ministries", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "member"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "tasks", force: :cascade do |t|
     t.string   "description"
-    t.integer  "user_id"
+    t.integer  "created_by"
     t.integer  "event_id"
     t.string   "status"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "volunteer"
+    t.integer  "event_owner"
+    t.time     "start_time"
+    t.time     "end_time"
   end
 
   create_table "users", force: :cascade do |t|

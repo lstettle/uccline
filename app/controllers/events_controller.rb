@@ -7,11 +7,12 @@ class EventsController < ApplicationController
       @events = category.events
     end
   end
-  def calendar
+
+  def calendar_view
     @events = Event.all
     render "index.html.erb"
   end
-
+  
   def new
     render "new.html.erb"
   end
@@ -28,8 +29,11 @@ class EventsController < ApplicationController
       price_child: params["price_child"],
       status: params["status"],
       description: params["description"]
-      )
+    )
     event.save
+    event_category = EventCategory.new(event_id: event.id, category_id: params["category_id"])
+    event_category.save
+
     redirect_to "/events/#{event.id}"
   end
 

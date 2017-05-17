@@ -1,0 +1,34 @@
+
+
+    <!-- WRAPPER -->
+    <div id="wrapper">
+
+      <!-- PAGE TITLE -->
+      <header id="page-title"> <!-- style="background-image:url('../assets/images/demo/parallax_bg.jpg')" -->
+        <!--
+          Enable only if bright background image used
+          <span class="overlay"></span>
+        -->
+
+        <div class="container">
+          <h1>Boards, Committees, and Ministries</h1>
+
+          <ul class="breadcrumb">
+            <li><a href="/boards">Boards, etc.</a></li>
+            <li class="active">Boards, etc.</li>
+          </ul>
+        </div>
+      </header>
+
+
+       
+          <div class="col-md-9">
+
+            <h2><strong>Committees and Ministries </strong></h2>
+
+            <% @committee_ministries.each do |committee_ministry| %>
+  <h2><a href="/boards/<%= committee_ministry.id %>"><%= committee_ministry.name %></a></h2>
+  <h3> ID number: <%= committee_ministry.id %></h3>
+  <p> Type: <%= committee_ministry.c_or_m %></p>
+
+  <% end %>

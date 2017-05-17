@@ -1,0 +1,3 @@
+class CommitteeMinistry < ApplicationRecord
+  
+end

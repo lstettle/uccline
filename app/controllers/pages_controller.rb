@@ -14,6 +14,16 @@ class PagesController < ApplicationController
   def staff
     "render staff.html.erb"
   end
+
+  def boards
+    @committee_ministries = CommitteeMinistry.all 
+    "render boards.html.erb"
+  end
+
+  def locations
+    @locations = Location.all
+    "render locations.html.erb"
+  end
     
 end
 

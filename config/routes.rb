@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get "/about" => "pages#about"
   get "/contact" => "pages#contact"
   get "/staff" => "pages#staff"
+  get "/boards" => "pages#boards"
+  get "/locations" => "pages#locations"
 
   get "/events" => "events#index"
   get "/events/new" => "events#new"

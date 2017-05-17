@@ -19,7 +19,7 @@ class EventsController < ApplicationController
 
   def create
     event = Event.new(
-      location: params["location"],
+      location: params["location_id"],
       start_date: params["start_date"],
       end_date: params["end_date"],
       start_time: params["start_time"],
@@ -33,6 +33,11 @@ class EventsController < ApplicationController
     event.save
     event_category = EventCategory.new(event_id: event.id, category_id: params["category_id"])
     event_category.save
+    location = Location.new(location_id: location.id)
+    location.save
+    committee_ministry = CommitteMinistry.new(committee_id: committee.id, ministry_id: ministry_id)
+    committe_ministry.save
+
 
     redirect_to "/events/#{event.id}"
   end

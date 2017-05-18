@@ -38,11 +38,10 @@
 
 <% @tasks.each do |task| %>
   <h2><a href="/tasks/<%= task.id %>"><%= task.description %></a></h2>
-  <h3> Event: <%= task.event.name %></h3>
-  <h3> Event Date: <%= task.event.start_date %></h3>
+  <h3> Event: <%=  %></h3>
+  <h3> Event Date: <%=  %></h3>
   <p>  </p>
   <p>  Status: <%= task.status %></p>
-  <p>  Created by: <%= task.created_by%></p>
   <p>  Event Owner: <%= task %></p>
   <% end %>
   <a href="/tasks/:id/edit"><Volunteer here></a>

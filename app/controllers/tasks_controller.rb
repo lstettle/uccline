@@ -15,11 +15,7 @@ class TasksController < ApplicationController
   def create
     task = Task.new(
       description: params["description"],
-      location: params["location"],
-      created_by: params["current_user"],
-      event_id: params["event_id"],
       status: params["status"],
-      event_owner: params["committee_ministry_id"],
       start_time: params["start_time"],
       end_time: params["end_time"]
       )

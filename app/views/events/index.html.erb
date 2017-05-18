@@ -39,11 +39,9 @@
 
 <% @events.each do |event| %>
   <h2><a href="/events/<%= event.id %>"><%= event.name %></a></h2>
-  <h3> Location: <%= event.location %></h3>
+  <h3> Location: <%=  %></h3>
   <p> Start Date: <%= event.start_date %></p>
   <p> End Date: <%= event.end_date %></p>
-  <p> Start Time: <%= event.start_time %></p>
-  <p> End Time: <%= event.end_time %></p>
   <p> Adult Price: <%= event.price_adult %></p>
   <p> Child Price: <%= event.price_child %></p>
   <p> Event Status: <%= event.status %></p>

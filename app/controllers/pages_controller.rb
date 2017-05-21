@@ -24,6 +24,13 @@ class PagesController < ApplicationController
     @locations = Location.all
     "render locations.html.erb"
   end
-    
+  
+  def blogs
+    "render blogs.html.erb"
+  end  
+
+  def message
+    "render message.html.erb"
+  end
 end
 

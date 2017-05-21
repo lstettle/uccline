@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price_adult: 1
+  price_child: MyString
+  integer: MyString
+
+two:
+  price_adult: 1
+  price_child: MyString
+  integer: MyString

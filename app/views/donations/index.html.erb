@@ -1,0 +1,41 @@
+<!-- WRAPPER -->
+    <div id="wrapper">
+
+      <!-- PAGE TITLE -->
+      <header id="page-title"> <!-- style="background-image:url('assets/images/demo/parallax_bg.jpg')" -->
+        <!--
+          Enable only if bright background image used
+          <span class="overlay"></span>
+        -->
+
+        <div class="container">
+          <h1>Events</h1>
+
+          <ul class="breadcrumb">
+            <li><a href="/donations">Donations</a></li>
+            <li><a href="/donations">Donate Here</a></li>
+            <li class="active">Full Detail</li>
+          </ul>
+        </div>
+      </header>
+
+      <section class="container">
+        <h2><strong>Donate Here</strong> </h2>
+
+        <p class="lead">Donate to a project or fundraiser here</p>
+          
+
+        <a href="/donations/new" button type="button" class="btn btn-primary">Add Donation</button> </a>
+      
+
+           
+
+        <div class="divider"><!-- divider -->
+          <i class="fa fa-star"></i>
+        </div>
+
+
+
+<% @donations.each do |donation| %>
+  <h2><a href="/donations/<%= donation.id %>"><%= donation.description %></a></h2>
+  <% end %>

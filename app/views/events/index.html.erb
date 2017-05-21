@@ -35,18 +35,16 @@
           <i class="fa fa-star"></i>
         </div>
  
+<%= month_calendar events: @events do |date, events| %>
+  <%= date.day %>
 
-
-<% @events.each do |event| %>
-  <h2><a href="/events/<%= event.id %>"><%= event.name %></a></h2>
-  <h3> Location: <%=  %></h3>
-  <p> Start Date: <%= event.start_date %></p>
-  <p> End Date: <%= event.end_date %></p>
-  <p> Adult Price: <%= event.price_adult %></p>
-  <p> Child Price: <%= event.price_child %></p>
-  <p> Event Status: <%= event.status %></p>
-  <p> Description: <%= event.description %></p>
+  <% events.each do |event| %>
+    <div>
+    <h2><a href="/events/<%= event.id %>"><%= event.name %></a></h2>
+    </div>
   <% end %>
+<% end %>
+    
 
   <a href="/tasks"> See what needs doing here</a> 
 

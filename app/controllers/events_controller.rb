@@ -19,17 +19,26 @@ class EventsController < ApplicationController
 
   def create
     event = Event.new(
-      start_date: params["start_date"],
-      end_date: params["end_date"],
+      start_time: params["start_time"],
+      end_time: params["end_time"],
       name: params["name"],
-      price_adult: params["price_adult"],
-      price_child: params["price_child"],
-      status: params["status"],
-      description: params["description"]
+      description: params["description"],
+      location_id: params["location_id"]
     )
     event.save
-    event_category = EventCategory.new(event_id: event.id, category_id: params["category_id"], location_id: params["location_id"], committee_ministry_id: params["committee_ministry_id"])
+    event_category = EventCategory.new(event_id: event.id, category_id: params["category_id"])
     event_category.save
+    #event_donation = EventDonation.new(event_id: event.id, donation_id: params["donation_id"])
+    #event_donation.save
+    #event_task = EventTask.new(event_id: event.id, task_id: params["task_id"])
+    #event_task.save
+    #event_ticket = EventTicket.new(event_id: event.id, price_adult: params["price_adult"], price_child: params["price_child"])
+    #event_ticket.save
+    event_owner = EventOwner.new(committee_ministry_id: params["committee_ministry_id"])
+    event_owner.save
+    event_location = EventLocation.new(location_id: params["location_id"])
+    event_location.save
+
 
 
     redirect_to "/events/#{event.id}"

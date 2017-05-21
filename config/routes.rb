@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get "/staff" => "pages#staff"
   get "/boards" => "pages#boards"
   get "/locations" => "pages#locations"
+  get "/blogs" => "pages#blogs"
+  get "/message" => "pages#message"
 
   get "/events" => "events#index"
   get "/events/new" => "events#new"
@@ -28,6 +30,22 @@ Rails.application.routes.draw do
   get "/tasks/:id/edit" => "tasks#edit"
   patch "/tasks/:id" => "tasks#update"
   delete "/tasks/:id" => "tasks#destroy"
+
+  get "/donations" => "donations#index"
+  get "/donations/new" => "donations#new"
+  post "/donations" => "donations#create"
+  get "/donations/:id" => "donations#show"
+  get "/donations/:id/edit" => "donations#edit"
+  patch "/donations/:id" => "donations#update"
+  delete "/donations/:id" => "donations#destroy"
+
+  get "/tickets" => "tickets#index"
+  get "/tickets/new" => "tickets#new"
+  post "/tickets/:id" => "tickets#create"
+  get "/tickets/:id" => "tickets#show"
+  get "/tickets/:id/edit" => "tickets#edit"
+  patch "/tickets/:id" => "tickets#update"
+  delete "/tickets/:id" => "tickets#destroy"
 
   get "/users" => "users#index"
   get "users/:id" => "users#show"

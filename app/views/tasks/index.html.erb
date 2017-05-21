@@ -34,14 +34,390 @@
           <i class="fa fa-star"></i>
         </div>
 
+ 
+ 
 
 
 <% @tasks.each do |task| %>
   <h2><a href="/tasks/<%= task.id %>"><%= task.description %></a></h2>
-  <h3> Event: <%=  %></h3>
-  <h3> Event Date: <%=  %></h3>
-  <p>  </p>
-  <p>  Status: <%= task.status %></p>
-  <p>  Event Owner: <%= task %></p>
   <% end %>
+
   <a href="/tasks/:id/edit"><Volunteer here></a>
+   <!-- WRAPPER -->
+    <div id="wrapper">
+
+      <div id="shop">
+
+        <!-- PAGE TITLE -->
+        <header id="page-title">
+          <div class="container">
+            <h1>Volunteer or Donate Here</h1>
+
+            <ul class="breadcrumb">
+              <li><a href="tasks.html">Volunteer/Donate</a></li>
+              <li class="active">Volunteer/Donate</li>
+            </ul>
+          </div>
+        </header>
+
+        <section class="container">
+
+          <div class="row">
+
+            <div class="col-md-9">
+
+              <div class="row top-shop-option">
+                <div class="col-sm-6 col-md-6">
+                  <p>Showing 1-12 of 38 results.</p>
+                </div>
+                <div class=" col-sm-6 col-md-6">
+                  <select class="pointer fsize13 pull-right" name="orderby">
+                    <option value="menu_order" selected='selected'>Open Tasks</option>
+                    <option value="popularity" >Sort by Event</option>
+                    <option value="rating" >Sort by Category</option>
+                    <option value="date" >Sort by Event Owner</option>
+                    <option value="price" >Sort by Location</option>
+                  </select>
+                </div>
+              </div>
+li><a href="/events" data-toggle="tooltip" data-placement="top" title="" data-original-title="Events"><span class="label label-danger">Events</span></a></li>
+                  <li class="dropdown-submenu"><a href="/events">All Events</a>
+                    
+                      <li><a href="/events/:id/edit">Update Event Info</a></li>
+                      <li><a href="/events/:id/edit">Delete Event</a></li>
+                      <li><a href="#">Calendar View</a></li>
+                    </ul>
+                  </li>
+            
+              <div class="row">
+
+                <!-- items -->
+                <div class="col-sm-6 col-md-4"><!-- item -->
+                  <div class="item-box">
+                    <figure>
+                      <a class="item-hover" href="shop-product-sidebar.html">
+                        <span class="overlay color2"></span>
+                        <span class="inner">
+                          <span class="block fa fa-plus fsize20"></span>
+                          <strong>Description</strong> 
+                        </span>
+                      </a>
+                      <a href="/tasks/>"><i class="fa fa-shopping-cart"></i> Donate Here</a>
+                  
+                      <img class="img-responsive" src="" width="260" height="260" alt="">
+                    </figure>
+            
+                    <div class="item-box-desc"<a href="/tasks/>"><%=  %></a>">
+                      <h4>Task Name</h4>
+                  
+                      <small class="styleColor"><span>$180</span> $150</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4"><!-- item -->
+                  <div class="item-box">
+                    <figure>
+                      <a class="item-hover" href="shop-product-sidebar.html">
+                        <span class="overlay color2"></span>
+                        <span class="inner">
+                          <span class="block fa fa-plus fsize20"></span>
+                          <strong>PRODUCT</strong> DETAIL
+                        </span>
+                      </a>
+                      <a href="shop-cart.html?action=cart_add&amp;product_id=1&amp;product_color=red&amp;product_size=l&amp;product_qty=1" class="btn btn-primary add_to_cart"><i class="fa fa-shopping-cart"></i> ADD TO CART</a>
+                      <img class="img-responsive" src="assets/images/demo/shop/2.jpg" width="260" height="260" alt="">
+                    </figure>
+                    <div class="item-box-desc">
+                      <h4>Black Shoes</h4>
+                      <small class="styleColor"><span>$180</span> $150</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4"><!-- item -->
+                  <div class="item-box">
+                    <figure>
+                      <a class="item-hover" href="shop-product-sidebar.html">
+                        <span class="overlay color2"></span>
+                        <span class="inner">
+                          <span class="block fa fa-plus fsize20"></span>
+                          <strong>PRODUCT</strong> DETAIL
+                        </span>
+                      </a>
+                      <a href="shop-cart.html?action=cart_add&amp;product_id=1&amp;product_color=red&amp;product_size=l&amp;product_qty=1" class="btn btn-primary add_to_cart"><i class="fa fa-shopping-cart"></i> ADD TO CART</a>
+                      <img class="img-responsive" src="assets/images/demo/shop/3.jpg" width="260" height="260" alt="">
+                    </figure>
+                    <div class="item-box-desc">
+                      <h4>James Bond Watch - Titanium Case</h4>
+                      <small class="styleColor"><span>$180</span> $150</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4"><!-- item -->
+                  <div class="item-box">
+                    <figure>
+                      <a class="item-hover" href="shop-product-sidebar.html">
+                        <span class="overlay color2"></span>
+                        <span class="inner">
+                          <span class="block fa fa-plus fsize20"></span>
+                          <strong>PRODUCT</strong> DETAIL
+                        </span>
+                      </a>
+                      <a href="shop-cart.html?action=cart_add&amp;product_id=1&amp;product_color=red&amp;product_size=l&amp;product_qty=1" class="btn btn-primary add_to_cart"><i class="fa fa-shopping-cart"></i> ADD TO CART</a>
+                      <img class="img-responsive" src="assets/images/demo/shop/4.jpg" width="260" height="260" alt="">
+                    </figure>
+                    <div class="item-box-desc">
+                      <h4>Pink Lady Shoes</h4>
+                      <small class="styleColor"><span>$180</span> $150</small>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col-sm-6 col-md-4"><!-- item -->
+                  <div class="item-box">
+                    <figure>
+                      <a class="item-hover" href="shop-product-sidebar.html">
+                        <span class="overlay color2"></span>
+                        <span class="inner">
+                          <span class="block fa fa-plus fsize20"></span>
+                          <strong>PRODUCT</strong> DETAIL
+                        </span>
+                      </a>
+                      <a href="shop-cart.html?action=cart_add&amp;product_id=1&amp;product_color=red&amp;product_size=l&amp;product_qty=1" class="btn btn-primary add_to_cart"><i class="fa fa-shopping-cart"></i> ADD TO CART</a>
+                      <img class="img-responsive" src="assets/images/demo/shop/5.jpg" width="260" height="260" alt="">
+                    </figure>
+                    <div class="item-box-desc">
+                      <h4>Yellow Lady Dress</h4>
+                      <small class="styleColor"><span>$180</span> $150</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4"><!-- item -->
+                  <div class="item-box">
+                    <figure>
+                      <a class="item-hover" href="shop-product-sidebar.html">
+                        <span class="overlay color2"></span>
+                        <span class="inner">
+                          <span class="block fa fa-plus fsize20"></span>
+                          <strong>PRODUCT</strong> DETAIL
+                        </span>
+                      </a>
+                      <a href="shop-cart.html?action=cart_add&amp;product_id=1&amp;product_color=red&amp;product_size=l&amp;product_qty=1" class="btn btn-primary add_to_cart"><i class="fa fa-shopping-cart"></i> ADD TO CART</a>
+                      <img class="img-responsive" src="assets/images/demo/shop/6.jpg" width="260" height="260" alt="">
+                    </figure>
+                    <div class="item-box-desc">
+                      <h4>White Hat</h4>
+                      <small class="styleColor"><span>$180</span> $150</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4"><!-- item -->
+                  <div class="item-box">
+                    <figure>
+                      <a class="item-hover" href="shop-product-sidebar.html">
+                        <span class="overlay color2"></span>
+                        <span class="inner">
+                          <span class="block fa fa-plus fsize20"></span>
+                          <strong>PRODUCT</strong> DETAIL
+                        </span>
+                      </a>
+                      <a href="shop-cart.html?action=cart_add&amp;product_id=1&amp;product_color=red&amp;product_size=l&amp;product_qty=1" class="btn btn-primary add_to_cart"><i class="fa fa-shopping-cart"></i> ADD TO CART</a>
+                      <img class="img-responsive" src="assets/images/demo/shop/7.jpg" width="260" height="260" alt="">
+                    </figure>
+                    <div class="item-box-desc">
+                      <h4>Man Shirt</h4>
+                      <small class="styleColor"><span>$180</span> $150</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4"><!-- item -->
+                  <div class="item-box">
+                    <figure>
+                      <a class="item-hover" href="shop-product-sidebar.html">
+                        <span class="overlay color2"></span>
+                        <span class="inner">
+                          <span class="block fa fa-plus fsize20"></span>
+                          <strong>PRODUCT</strong> DETAIL
+                        </span>
+                      </a>
+                      <a href="shop-cart.html?action=cart_add&amp;product_id=1&amp;product_color=red&amp;product_size=l&amp;product_qty=1" class="btn btn-primary add_to_cart"><i class="fa fa-shopping-cart"></i> ADD TO CART</a>
+                      <img class="img-responsive" src="assets/images/demo/shop/8.jpg" width="260" height="260" alt="">
+                    </figure>
+                    <div class="item-box-desc">
+                      <h4>Futuristic Sofa</h4>
+                      <small class="styleColor"><span>$180</span> $150</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4"><!-- item -->
+                  <div class="item-box">
+                    <figure>
+                      <a class="item-hover" href="shop-product-sidebar.html">
+                        <span class="overlay color2"></span>
+                        <span class="inner">
+                          <span class="block fa fa-plus fsize20"></span>
+                          <strong>PRODUCT</strong> DETAIL
+                        </span>
+                      </a>
+                      <a href="shop-cart.html?action=cart_add&amp;product_id=1&amp;product_color=red&amp;product_size=l&amp;product_qty=1" class="btn btn-primary add_to_cart"><i class="fa fa-shopping-cart"></i> ADD TO CART</a>
+                      <img class="img-responsive" src="assets/images/demo/shop/1.jpg" width="260" height="260" alt="">
+                    </figure>
+                    <div class="item-box-desc">
+                      <h4>Another Man Shirt</h4>
+                      <small class="styleColor"><span>$180</span> $150</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4"><!-- item -->
+                  <div class="item-box">
+                    <figure>
+                      <a class="item-hover" href="shop-product-sidebar.html">
+                        <span class="overlay color2"></span>
+                        <span class="inner">
+                          <span class="block fa fa-plus fsize20"></span>
+                          <strong>PRODUCT</strong> DETAIL
+                        </span>
+                      </a>
+                      <a href="shop-cart.html?action=cart_add&amp;product_id=1&amp;product_color=red&amp;product_size=l&amp;product_qty=1" class="btn btn-primary add_to_cart"><i class="fa fa-shopping-cart"></i> ADD TO CART</a>
+                      <img class="img-responsive" src="assets/images/demo/shop/2.jpg" width="260" height="260" alt="">
+                    </figure>
+                    <div class="item-box-desc">
+                      <h4>Same Black Shoe</h4>
+                      <small class="styleColor"><span>$180</span> $150</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4"><!-- item -->
+                  <div class="item-box">
+                    <figure>
+                      <a class="item-hover" href="shop-product-sidebar.html">
+                        <span class="overlay color2"></span>
+                        <span class="inner">
+                          <span class="block fa fa-plus fsize20"></span>
+                          <strong>PRODUCT</strong> DETAIL
+                        </span>
+                      </a>
+                      <a href="shop-cart.html?action=cart_add&amp;product_id=1&amp;product_color=red&amp;product_size=l&amp;product_qty=1" class="btn btn-primary add_to_cart"><i class="fa fa-shopping-cart"></i> ADD TO CART</a>
+                      <img class="img-responsive" src="assets/images/demo/shop/3.jpg" width="260" height="260" alt="">
+                    </figure>
+                    <div class="item-box-desc">
+                      <h4>James Bond Watch</h4>
+                      <small class="styleColor"><span>$180</span> $150</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4"><!-- item -->
+                  <div class="item-box">
+                    <figure>
+                      <a class="item-hover" href="shop-product-sidebar.html">
+                        <span class="overlay color2"></span>
+                        <span class="inner">
+                          <span class="block fa fa-plus fsize20"></span>
+                          <strong>PRODUCT</strong> DETAIL
+                        </span>
+                      </a>
+                      <a href="shop-cart.html?action=cart_add&amp;product_id=1&amp;product_color=red&amp;product_size=l&amp;product_qty=1" class="btn btn-primary add_to_cart"><i class="fa fa-shopping-cart"></i> ADD TO CART</a>
+                      <img class="img-responsive" src="assets/images/demo/shop/4.jpg" width="260" height="260" alt="">
+                    </figure>
+                    <div class="item-box-desc">
+                      <h4>Pink Lady Shoes</h4>
+                      <small class="styleColor"><span>$180</span> $150</small>
+                    </div>
+                  </div>
+                </div>
+                <!-- items -->
+
+              </div>
+
+              <!-- PAGINATION -->
+              <div class="row">
+
+                <div class="col-md-6 text-left">
+                  <p class="hidden-xs pull-left nomargin padding20">Showing 1-10 of 38 results.</p>
+                </div>
+
+                <div class="col-md-6 responsive-text-center text-right">
+                  <ul class="pagination">
+                    <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                  </ul>
+                </div>
+
+              </div>
+              <!-- /PAGINATION -->
+
+            </div><!-- /col-md-9 -->
+
+            <aside class="col-md-3">
+
+              <h3>CATEGORIES</h3><!-- h3 - have no margin-top -->
+              <ul class="nav nav-list">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Men</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Women</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Kids</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Garden Tools</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Books</a></li>
+              </ul>
+
+              <!-- SHOP FILTERS -->
+              <form method="get" action="#">
+
+                <!-- price slider -->
+                <h4>Price</h4>
+
+                <div class="price-slider layout-slider">
+                  <input id="Slider2" type="slider" name="price" value="10;300" />
+                </div>
+                <script type="text/javascript" charset="utf-8">
+                  var slider_config = { from: 10, to: 500, heterogeneity: ['50/100', '75/250'], step: 10, dimension: '&nbsp;$', skin: 'round_plastic' };
+                </script>
+                <!-- /price slider -->
+
+                <h4>Size</h4>
+                <label class="block pointer font400"><input type="checkbox" /> XL</label>
+                <label class="block pointer font400"><input type="checkbox" /> XXL</label>
+                <label class="block pointer font400"><input type="checkbox" /> XXL</label>
+
+                <h4>Color</h4>
+                <label class="block pointer font400"><input type="checkbox" checked="checked" /> Red</label>
+                <label class="block pointer font400"><input type="checkbox" checked="checked" /> Blue</label>
+                <label class="block pointer font400"><input type="checkbox" checked="checked" /> Green</label>
+
+                <hr class="half-margins" />
+
+                <button class="btn btn-default">APPLY FILTER</button>
+              </form>
+              <!-- /SHOP FILTERS -->
+
+            </aside>
+
+          </div><!-- /row -->
+
+        </section>
+
+      </div>
+    </div>
+    <!-- /WRAPPER -->
+
+
+  <a href="/tasks"> See what needs doing here</a> 
+
+  
+
+ 
+

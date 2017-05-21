@@ -40,14 +40,11 @@
 <% @event.categories.each do |category| %>
 <li><%= category.name %></li>
 <% end %>
-</ul>
-</div>
-<h2> Location: <%= @event.location %></h2>
-<p> Start Date: <%= @event.start_date %></p>
-<p> End Date: <%= @event.end_date %></p>
-<p> Start Time: <%= @event.start_time %></p>
-<p> End Time: <%= @event.end_time %></p>
-<p> Price Adult: <%= @event.price_adult %></p>
-<p> Price Child: <%= @event.price_child %></p>
+<p> Location: <%= event.locations.name %></p>
+<p> Date and Time: <%= @event.start_time %></p>
+<p> Date End Time: <%= @event.end_time %></p>
+<p> Event Owner: <%= @event.committee_ministry_id %></p>
 
- 
+<a href="/donations/new" button type="button" class="btn btn-primary">Add Donation</button> </a>
+<a href="/tasks/new" button type="button" class="btn btn-primary">Add Task</button> </a>
+ <a href="/tickets/new" button type="button" class="btn btn-primary">Add Tickets</button> </a>

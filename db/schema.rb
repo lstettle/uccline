@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170517022001) do
+ActiveRecord::Schema.define(version: 20170521014155) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,44 +28,56 @@ ActiveRecord::Schema.define(version: 20170517022001) do
     t.string   "c_or_m"
   end
 
-  create_table "committees", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "member"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "donations", force: :cascade do |t|
+    t.string   "description"
+    t.integer  "amount"
+    t.integer  "quantity"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "event_categories", force: :cascade do |t|
     t.integer  "event_id"
     t.integer  "category_id"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
-    t.integer  "task_id"
-    t.integer  "committee_ministry_id"
-    t.integer  "location_id"
-  end
-
-  create_table "events", force: :cascade do |t|
-    t.datetime "start_date"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "name"
-    t.integer  "price_adult"
-    t.integer  "price_child"
-    t.string   "status"
-    t.text     "description"
-    t.date     "end_date"
   end
 
-  create_table "locations", force: :cascade do |t|
-    t.string   "name"
+  create_table "event_donations", force: :cascade do |t|
+    t.integer  "event_id"
+    t.integer  "donation_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "event_tasks", force: :cascade do |t|
+    t.integer  "event_id"
+    t.integer  "task_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "ministries", force: :cascade do |t|
+  create_table "event_tickets", force: :cascade do |t|
+    t.integer  "event_id"
+    t.integer  "ticket_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.datetime "start_time"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
     t.string   "name"
-    t.integer  "member"
+    t.integer  "location_id"
+    t.integer  "committee_ministry_id"
+    t.string   "status"
+    t.text     "description"
+    t.datetime "end_time"
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -78,6 +90,14 @@ ActiveRecord::Schema.define(version: 20170517022001) do
     t.integer  "volunteer"
     t.time     "start_time"
     t.time     "end_time"
+  end
+
+  create_table "tickets", force: :cascade do |t|
+    t.integer  "price_adult"
+    t.string   "price_child"
+    t.string   "integer"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|

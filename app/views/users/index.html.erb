@@ -24,24 +24,33 @@
 
         <p class="lead">Contact Information at your fingertips. </p>
           
-      
+     
+
 
            
 
         <div class="divider"><!-- divider -->
           <i class="fa fa-star"></i>
         </div>
-
-
+ 
 
 <% @users.each do |user| %>
-  <h3><a href="/tasks/<%= user.id %>"><%= user.id %></a></h3>
-  <h2> <strong>First Name: <%= user.first_name %></strong></h2>
-  <h2> <strong>Last Name: <%= user.last_name %></strong></h2>
-  <p> Address: <%= user.address %></p>
-  <p> Phone: <%= user.phone %></p>
-  <p> Email: <%= user.email %></p>
-  <p> Type: <%= user.role %></p>
-  <p> Type: <%= committee.name %></p>
+<div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr class="succcess">
+  <th><h3><a href="/users/<%= user.id %>"><%= user.id %></a></h3></th>
+  <th><h2><strong><%= user.first_name %></strong></h2></th>
+  <th><h2><strong><%= user.last_name %></strong></h2></th>
+  <th><p> Phone: <%= user.phone %></p></th>
+  <th><p> Email: <%= user.email %></p></th>
+   </tr class=>
+  </thead>
+    </tbody>
+      </table>
+      </div>
+
 
   <% end %>
+
+

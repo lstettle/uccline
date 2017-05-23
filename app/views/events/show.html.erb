@@ -40,10 +40,10 @@
 <% @event.categories.each do |category| %>
 <li><%= category.name %></li>
 <% end %>
-<p> Location: <%= event.locations.name %></p>
+<p> Location: <%= @event.location.name %></p>
 <p> Date and Time: <%= @event.start_time %></p>
 <p> Date End Time: <%= @event.end_time %></p>
-<p> Event Owner: <%= @event.committee_ministry_id %></p>
+<p> Event Owner: <%= @event.committee_ministry.name%></p>
 
 <a href="/donations/new" button type="button" class="btn btn-primary">Add Donation</button> </a>
 <a href="/tasks/new" button type="button" class="btn btn-primary">Add Task</button> </a>

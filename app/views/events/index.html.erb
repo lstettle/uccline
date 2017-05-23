@@ -26,7 +26,8 @@
           
 
         <a href="/events/new" button type="button" class="btn btn-primary">Add Event</button> </a>
-        <a href="/tasks" button type="button" class="btn btn-primary">See Tasks</button> </a>
+        <a href="/tasks" button type="button" class="btn btn-primary">See Tasks</button> 
+        </a>
       
 
            
@@ -40,8 +41,8 @@
 
   <% events.each do |event| %>
     <div>
-    <h2><a href="/events/<%= event.id %>"><%= event.name %></a></h2>
-    </div>
+    <h2><a href="/events/<%= event.id %>"><span class="glyphicon glyphicon-<%= event.icon %> aria-hidden-true"></span><%= event.name %></a></h2>
+
   <% end %>
 <% end %>
     

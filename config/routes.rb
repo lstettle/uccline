@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   get "/tasks" => "tasks#index"
   get "/tasks/new" => "tasks#new"
   post "/tasks" => "tasks#create"
-  get "tasks/:id" => "tasks#show"
+  get "/tasks/:id" => "tasks#show"
   get "/tasks/:id/edit" => "tasks#edit"
   patch "/tasks/:id" => "tasks#update"
   delete "/tasks/:id" => "tasks#destroy"
@@ -41,7 +41,7 @@ Rails.application.routes.draw do
 
   get "/tickets" => "tickets#index"
   get "/tickets/new" => "tickets#new"
-  post "/tickets/:id" => "tickets#create"
+  post "/tickets/" => "tickets#create"
   get "/tickets/:id" => "tickets#show"
   get "/tickets/:id/edit" => "tickets#edit"
   patch "/tickets/:id" => "tickets#update"

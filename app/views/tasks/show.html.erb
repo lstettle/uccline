@@ -33,13 +33,8 @@
         <div class="divider"><!-- divider -->
           <i class="fa fa-star"></i>
         </div>
-         
-
-<h2> Location: <%= @task.event.location %></h2>
-<p> Start Date: <%= @task.event.start_date %></p>
-<p> End Date: <%= @task.event.end_date %></p>
-<p> Start Time: <%= @task.start_time %></p>
-<p> End Time: <%= @task.end_time %></p>
-<p> Created By: <%= @task.created_by %></p>
-<p> Direct Questions to: <%= @task.event_owner %></p>
+<p> Task: <% @task.description %></p>
+<p> Event: <%= @task.event.name %></p>
+<p> Start Date: <%= @task.start_time %></p>
+<p> End Date: <%= @task.end_time %></p>
 <p> Task Status: <%= @task.status %></p>

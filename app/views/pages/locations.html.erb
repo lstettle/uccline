@@ -29,8 +29,17 @@
              
                  
   <% @locations.each do |location| %>
-  <h2><a href="/locations/<%= location.id %>"><%= location.name %></a></h2>
-  <h3> ID number: <%= location.id %></h3>
+  <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>      
+  <th><h2><a href="/locations/<%= location.id %>"><%= location.name %></a></h2></th>
+  <th><h3> ID number: <%= location.id %></h3></th>
+  </tr>
+  </thead>
+    </tbody>
+      </table>
+      </div>
 
 
   <% end %>

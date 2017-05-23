@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170521014155) do
+ActiveRecord::Schema.define(version: 20170521202125) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20170521014155) do
     t.integer  "quantity"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "event_id"
   end
 
   create_table "event_categories", force: :cascade do |t|
@@ -41,27 +42,6 @@ ActiveRecord::Schema.define(version: 20170521014155) do
     t.integer  "category_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-  end
-
-  create_table "event_donations", force: :cascade do |t|
-    t.integer  "event_id"
-    t.integer  "donation_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "event_tasks", force: :cascade do |t|
-    t.integer  "event_id"
-    t.integer  "task_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "event_tickets", force: :cascade do |t|
-    t.integer  "event_id"
-    t.integer  "ticket_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "events", force: :cascade do |t|
@@ -87,17 +67,17 @@ ActiveRecord::Schema.define(version: 20170521014155) do
     t.string   "status"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.integer  "volunteer"
     t.time     "start_time"
     t.time     "end_time"
+    t.integer  "event_id"
   end
 
   create_table "tickets", force: :cascade do |t|
     t.integer  "price_adult"
-    t.string   "price_child"
-    t.string   "integer"
+    t.integer  "price_child"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "event_id"
   end
 
   create_table "users", force: :cascade do |t|

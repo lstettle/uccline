@@ -1,9 +1,9 @@
 class TicketsController < ApplicationController
   def index
     @tickets = Ticket.all 
-    if params[:category]
-      category = Category.find_by(name: params[:category])
-      @ticket = tickets.event
+    if params[:event]
+      event = Event.find_by(name: params[:event])
+      @tickets = ticket.events
     end
   end
    
@@ -13,19 +13,19 @@ class TicketsController < ApplicationController
 
   def create
     ticket = Ticket.new(
+      event_id: params["event_id"],
       price_adult: params["price_adult"],
       price_child: params["price_child"],
       )
     ticket.save
-    event_ticket = EventTicket.new(event_id: event.id, ticket_id: params["ticket_id"])
-    event_ticket.save
+
+    redirect_to "/tickets/#{ticket.id}"
     
   end
 
   def show
     ticket_id = params[:id]
     @ticket = Ticket.find_by(id: ticket_id)
-    redirect_to "/tickets/#{ticket.id}"
     render "show.html.erb"
   end
 
@@ -38,6 +38,7 @@ class TicketsController < ApplicationController
   def update
     ticket_id = params[:id]
     ticket = Ticket.find_by(id: ticket_id)
+    ticket.event_id = params[:event_id]
     ticket.price_adult = params[:price_adult]
     ticket.price_child = params[:price_child]
     ticket.save

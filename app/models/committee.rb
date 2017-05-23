@@ -1,3 +1,0 @@
-class Committee < ApplicationRecord
-  
-end

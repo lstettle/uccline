@@ -2,8 +2,8 @@ class DonationsController < ApplicationController
 
   def index
     @donations = Donation.all 
-    if params[:category]
-      category = Category.find_by(name: params[:category])
+    if params[:event]
+      event = Event.find_by(name: params[:event])
       @donations = donation.event
     end
   end
@@ -14,20 +14,20 @@ class DonationsController < ApplicationController
 
   def create
     donation = Donation.new(
+      event_id: params["event_id"],
       description: params["description"],
       amount: params["amount"],
       quantity: params["quantity"]
       )
     donation.save
-    event_donation = EventDonation.new(event_id: event.id, donation_id: params["donation_id"])
-    event_donation.save
+
+    redirect_to "/donations/#{donation.id}"
     
   end
 
   def show
     donation_id = params[:id]
     @donation = Donation.find_by(id: donation_id)
-    redirect_to "/donation/#{donation.id}"
     render "show.html.erb"
   end
 
@@ -40,6 +40,7 @@ class DonationsController < ApplicationController
   def update
     donation_id = params[:id]
     donation = Donation.find_by(id: donation_id)
+    donation.event_id = params[:event_id]
     donation.description = params[:description]
     donation.amount = params[:amount]
     donation.quantity = params[:quantity]

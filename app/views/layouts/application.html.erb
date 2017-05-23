@@ -159,172 +159,69 @@
                   Home <i class="fa fa-angle-down"></i>
                 </a>
                 <ul class="dropdown-menu">
-                  <li class="dropdown-submenu"><a href="/">Home</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="/about">About Us</a></li>
+                <li><a href="/about">About Us</a></li>
                       <li><a href="/contact">Contact Us</a></li>
+                      <li><a href="/message">Pastor's Message</a></li>
+                      <li><a href="/blogs">UCC News Daily Devotionals</a></li>
                       <li><a href="/boards">Boards, Committees, Ministries</a></li>
                       <li><a href="/staff">Staff</a></li>
                       <li><a href="/locations">Locations of church Events</a></li>
-                    </ul>
+                      <li><a href="/users">Church Directory (make sure requires login)</a></li>
+                  <li class="divider"></li> 
+                  </ul>
                   </li>
-                  <li><a href="/events" data-toggle="tooltip" data-placement="top" title="" data-original-title="Events"><span class="label label-danger">Events</span></a></li>
-                  <li class="dropdown-submenu"><a href="/events">All Events</a>
-                    <ul class="dropdown-menu">
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="/Events">
+                  Events <i class="fa fa-angle-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="/events">Events</a></li>
+                  <li class="divider"></li>
                      <% Category.all.each do |category| %>
                       <li><a href="/events?category=<%= category.name %>"><%= category.name %></a></li>
                       <% end %>
-                      <li><a href="/events/:id/edit">Update Event Info</a></li>
-                      <li><a href="/events/:id/edit">Delete Event</a></li>
-                      <li><a href="#">Calendar View</a></li>
-                    </ul>
-                  </li>
                   <li class="divider"></li>
-                  <li><a href="#">My Events</a></li>
+                  <li><a href="/tickets">Buy Tickets</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="/tasks">
+                  Volunteer Donate Here <i class="fa fa-angle-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="/tasks">See all tasks</a></li>
+                  <li><a href="/tasks">Sign up for tasks</a></li>
+                  <li><a href="/tasks">Fill Later(task index)</a></li>
+                  <li><a href="/tasks">Fill later(task index)</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/donations">Donate Here</a></li>
+                  <li><a href="/donations">fill later (donations index)</a></li>
+                  <li><a href="/donations">fill later (donations index)</a></li>
+                </li>
+                </ul>
+                </li>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="#/users">
+                  My Pages <i class="fa fa-angle-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                <li><a href="#">My Events</a></li>
                   <li><a href="#">My Volunteer Tasks</a></li>
                   <li><a href="#">My Church Directory</a></li>
                   <li><a href="realestate-home.html">My Financial Contributions</a></li>
                   <li class="divider"></li>
-                  <li><a href="onepage-superslides.html" target="_blank">Onepage - Superslides</a></li>
-                  <li><a href="onepage-revolution.html" target="_blank">Onepage - Revolution</a></li>
-                  <li><a href="index-more.html">More...</a></li>
-                </ul>
-              </li>
-              <li class="dropdown mega-menu-item mega-menu-two-columns">
-                <a class="dropdown-toggle" href="#">
-                  Pages <i class="fa fa-angle-down"></i>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <div class="mega-menu-content">
-                      <div class="row">
-
-                        <div class="col-md-6">
-                          <ul class="sub-menu">
-                            <li>
-                              <ul class="sub-menu">
-
-                                <li><a href="shortcodes-rows.html"><i class="fa fa-star-o"></i> Shortcodes</a></li>
-                                <li><a href="page-about-us.html"><i class="fa fa-check-square-o"></i> About Us</a></li>
-                                <li><a href="page-about-me.html"><i class="fa fa-check-square-o"></i> About Me</a></li>
-                                <li><a href="page-team.html"><i class="fa fa-check-square-o"></i> Team</a></li>
-                                <li><a href="page-services.html"><i class="fa fa-check-square-o"></i> Services</a></li>
-                                <li><a href="page-faq.html"><i class="fa fa-check-square-o"></i> FAQ</a></li>
-                                <li><a href="page-support.html"><i class="fa fa-check-square-o"></i> Support</a></li>
-                                <li><a href="page-privacy-policy.html"><i class="fa fa-check-square-o"></i> Privacy Policy</a></li>
-                                <li><a href="page-terms-and-conditions.html"><i class="fa fa-check-square-o"></i> Terms Page</a></li>
-                                <li><a href="page-invoice.html"><i class="fa fa-check-square-o"></i> Invoice</a></li>
-                                <li class="dropdown-submenu">
-                                  <a href="#"><i class="fa fa-check-square-o"></i> Contact</a>
-                                  <ul class="dropdown-menu">
-                                    <li><a href="contact-us.html">Version 1</a></li>
-                                    <li><a href="contact-us-2.html">Version 2</a></li>
-                                    <li><a href="contact-us-3.html">Version 3</a></li>
-                                    <li><a href="contact-us-4.html">Version 4</a></li>
-                                  </ul>
-                                </li>
-                                <li><a href="page-sitemap.html"><i class="fa fa-sitemap"></i> Sitemap</a></li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </div>
-
-                        <div class="col-md-6">
-                          <ul class="sub-menu">
-                            <li>
-                              <ul class="sub-menu">
-                                <li><a href="page-testimonials.html"><i class="fa fa-check-square-o"></i> Testimonials</a></li>
-                                <li><a href="page-pricing.html"><i class="fa fa-check-square-o"></i> Pricing</a></li>
-                                <li><a href="page-pricing-extended.html"><i class="fa fa-check-square-o"></i> Pricing Extended</a></li>
-                                <li><a href="page-signin.html"><i class="fa fa-check-square-o"></i> Login</a></li>
-                                <li><a href="page-signup.html"><i class="fa fa-check-square-o"></i> Register</a></li>
-                                <li><a href="page-404.html"><i class="fa fa-check-square"></i> 404 Error</a></li>
-                                <li><a href="page-maintenance.html"><i class="fa fa-check-square"></i> Maintenance</a></li>
-                                <li class="dropdown-submenu">
-                                  <a href="#"><i class="fa fa-check-square"></i> Coming Soon</a>
-                                  <ul class="dropdown-menu">
-                                    <li><a href="page-coming-soon-image.html">Coming Soon - Image</a></li>
-                                    <li><a href="page-coming-soon-video.html">Coming Soon - Video</a></li>
-                                  </ul>
-                                </li>
-                                <li class="dropdown-submenu">
-                                  <a href="#"><i class="fa fa-check-square"></i> Custom Header</a>
-                                  <ul class="dropdown-menu">
-                                    <li><a href="page-header-basic.html">Basic</a></li>
-                                    <li><a href="page-header-image.html">Image</a></li>
-                                    <li><a href="page-header-overlay1.html">Overlay 1</a></li>
-                                    <li><a href="page-header-overlay2.html">Overlay 2</a></li>
-                                    <li><a href="page-header-overlay3.html">Overlay 3</a></li>
-                                    <li><a href="page-header-delayed-parallax.html">Delayed Parallax</a></li>
-                                    <li><a href="page-header-standard-parallax.html">Standard Parallax</a></li>
-                                  </ul>
-                                </li>
-                                <li><a href="page-full-width.html"><i class="fa fa-check-square-o"></i> Full width</a></li>
-                                <li><a href="page-left-sidebar.html"><i class="fa fa-check-square-o"></i> Left Sidebar</a></li>
-                                <li><a href="page-right-sidebar.html"><i class="fa fa-check-square-o"></i> Right Sidebar</a></li>
-                                <li><a href="email-template.html"><i class="fa fa-envelope"></i>Email Template</a></li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </div>
-                            
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-               
-              <li class="dropdown">
-                <a class="dropdown-toggle" href="#">
-                  Shop <i class="fa fa-angle-down"></i>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a href="shop-home.html">Shop - Home</a></li>
-                  <li class="divider"></li>
-                  <li><a href="shop-full-width.html">Shop Full Width</a></li>
-                  <li><a href="shop-product-full-width.html">Shop Product Full Width</a></li>
-                  <li class="divider"></li>
-                  <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
-                  <li><a href="shop-product-sidebar.html">Shop Product Sidebar</a></li>
-                  <li class="divider"></li>
-                  <li><a href="shop-cart.html">Shop Cart</a></li>
-                  <li><a href="shop-cc-pay.html">Shop Credit Card</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" href="#">
-                  Blog <i class="fa fa-angle-down"></i>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a href="blog-full-width.html">Blog Without Sidebar</a></li>
-                  <li><a href="blog-left-sidebar.html">Blog With Sidebar Left</a></li>
-                  <li><a href="blog-right-sidebar.html">Blog With Sidebar Right</a></li>
-                  <li><a href="blog-timeline.html">Blog Timeline</a></li>
-                  <li><a href="blog-masonry.html">Blog Masonry</a></li>
-                  <li><a href="blog-masonry-full-width.html">Blog Masonry - Full Width</a></li>
-                  <li><a href="blog-masonry-sidebar.html">Blog Masonry - Sidebar</a></li>
-                  <li class="divider"></li>
-                  <li><a href="blog-single-sidebar-left.html">Single Sidebar Left</a></li>
-                  <li><a href="blog-single-sidebar-right.html">Single Sidebar Right</a></li>
-                  <li><a href="blog-single-sidebar-no.html">Single No Sidebar</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" href="#">
-                  Portfolio <i class="fa fa-angle-down"></i>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a href="portfolio-2-columns.html">2 Columns</a></li>
-                  <li><a href="portfolio-3-columns.html">3 Columns</a></li>
-                  <li><a href="portfolio-4-columns.html">4 Columns</a></li>
-                  <li><a href="portfolio-lightbox.html">Portfolio - Gallery</a></li>
-                  <li><a href="portfolio-full-width.html">Portfolio Full Width</a></li>
-                  <li><a href="portfolio-full-center.html">Portfolio Full Center</a></li>
-                  <li class="divider"></li>
                   <li><a href="portfolio-single.html">Single - Basic</a></li>
                   <li><a href="portfolio-single-extended.html">Single - Extended</a></li>
-                  <li><a href="portfolio-single-full-slider.html">Single - Full Slider</a></li>
+                  <li><a href="">Single - Full Slider</a></li>
                 </ul>
+                </li>
+                </ul>
+                </li>
+                </nav>
+                </div>
+              </li>
+              </ul>
               </li>
 
               <!-- GLOBAL SEARCH -->
@@ -349,7 +246,7 @@
                   <p><i class="fa fa-warning"></i> You have 3 products on your cart</p>
 
                   <a class="item" href="shop-product-full-width.html"><!-- item 1 -->
-                    <img class="pull-left" src="assets/images/demo/shop/thumb/1.jpg" width="40" alt="quick cart" />
+                    <img class="pull-left" src="" width="40" alt="quick cart" />
                     <div class="inline-block">
                       <span class="title">Man shirt XL</span>
                       <span class="price">2 &times; $44.00</span>
@@ -357,7 +254,7 @@
                   </a><!-- /item 1 -->
 
                   <a class="item" href="shop-product-full-width.html"><!-- item 2 -->
-                    <img class="pull-left" src="assets/images/demo/shop/thumb/2.jpg" width="40" alt="quick cart" />
+                    <img class="pull-left" src="" width="40" alt="quick cart" />
                     <div class="inline-block">
                       <span class="title">Great Black Shoes For Man and Only Man...</span>
                       <span class="price">2 &times; $44.00</span>
@@ -365,7 +262,7 @@
                   </a><!-- /item 2 -->
 
                   <a class="item" href="shop-product-full-width.html"><!-- item 3 -->
-                    <img class="pull-left" src="assets/images/demo/shop/thumb/4.jpg" width="40" alt="quick cart" />
+                    <img class="pull-left" src="" width="40" alt="quick cart" />
                     <div class="inline-block">
                       <span class="title">Pink Lady Perfect Shoes</span>
                       <span class="price">1 &times; $67.32</span>
@@ -419,7 +316,7 @@
       <div class="footer-bar">
         <div class="container">
           <span class="copyright">Copyright &copy; Congregational Church of Jefferson Park . All Rights Reserved.</span>
-          <a class="toTop" href="#topNav">BACK TO TOP <i class="fa fa-arrow-circle-up"></i></a>
+          <a class="toTop" href="/">BACK TO TOP <i class="fa fa-arrow-circle-up"></i></a>
         </div>
       </div>
       <!-- copyright , scrollTo Top -->
@@ -474,19 +371,16 @@
               <h3>RECENT News</h3>
 
               <div class="post-item">
-                <small>JANUARY 2, 2014 BY ADMIN</small>
-                <h3><a href="blog-single-sidebar-left.html">Build out or delete</a></h3>
+                <small>May 2017</small>
+                <h3><a href="/message">Pastor's Message</a></h3>
               </div>
               <div class="post-item">
-                <small>JANUARY 2, 2014 BY ADMIN</small>
-                <h3><a href="blog-single-sidebar-left.html">Build out or delete</a></h3>
+                <small>UCC Newsfeed</small>
+                <h3><a href="/blogs">UCC Newsfeed</a></h3>
               </div>
-              <div class="post-item">
-                <small>JANUARY 2, 2014 BY ADMIN</small>
-                <h3><a href="blog-single-sidebar-left.html">Build out or delete</a></h3>
-              </div>
+               
 
-              <a href="blog-masonry-sidebar.html" class="view-more pull-right">View Blog <i class="fa fa-arrow-right"></i></a>
+              <a href="/blogs" class="view-more pull-right">View Blog <i class="fa fa-arrow-right"></i></a>
 
             </div>
             <!-- /FOOTER LATEST POSTS -->

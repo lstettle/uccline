@@ -1,6 +1,4 @@
-
-
-<!-- WRAPPER -->
+ <!-- WRAPPER -->
     <div id="wrapper">
 
       <!-- PAGE TITLE -->
@@ -11,20 +9,20 @@
         -->
 
         <div class="container">
-          <h1>Events</h1>
+          <h1>Donations</h1>
 
           <ul class="breadcrumb">
-            <li><a href="/tasks/new">Add new task</a></li>
-            <li><a href="/tasks">All open tasks</a></li>
+            <li><a href="/donations/new">Add a Donation</a></li>
+            <li><a href="/donations">Donations</a></li>
             <li class="active">This event</li>
           </ul>
         </div>
       </header>
 
       <section class="container">
-        <h2><strong>New Task</strong> </h2>
+        <h2><strong>New Donation</strong> </h2>
 
-        <p class="lead">Add a New Task</p>
+        <p class="lead">Add a New Donation</p>
 
            
 
@@ -40,36 +38,33 @@
           <div class="col-md-9">
 
 
-<form action="/tasks" method="post">
-<%= form_tag '/tasks', method: :post do %>
+<form action="/donations" method="post">
+<%= form_tag '/donations', method: :post do %>
   
-
   <div class="form-group">
-    <%= label_tag :description %> 
-    <%= text_field_tag :description, "", class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-  <%= label_tag :event %>
+  <%= label_tag :event_id %>
   <select class="form-control" name="event_id">
     <% Event.all.each do |event| %>
       <option value="<%= event.id %>"><%= event.name %></option>
     <% end %>
   </select>
   </div>
+  
   <div class="form-group">
-    <%= label_tag :start_time %> 
-    <%= text_field_tag :start_time, "", class: "form-control" %>
-  </div><div class="form-group">
-    <%= label_tag :end_time %> 
-    <%= text_field_tag :end_time, "", class: "form-control" %>
+    <%= label_tag :description %> 
+    <%= text_field_tag :description, "", class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= label_tag :status %>
-    <%= text_field_tag :status, "", class: "form-control" %>
+    <%= label_tag :amount %> 
+    <%= text_field_tag :amount, "", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :quantity %> 
+    <%= text_field_tag :quantity, "", class: "form-control" %>
   </div>
    
-  <%= submit_tag "Add task", class: "btn btn-primary" %>
+
+  <%= submit_tag "Add Donation", class: "btn btn-primary" %>
 
   <% end %>
 

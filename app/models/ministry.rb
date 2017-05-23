@@ -1,3 +1,0 @@
-class Ministry < ApplicationRecord
-  
-end
